@@ -71,6 +71,11 @@ echo GECKO_OBJDIR=$PWD/objdir-gecko >> .tmp-config
 echo DEVICE_NAME=$1 >> .tmp-config
 
 case "$1" in
+"blu-quattro-d450")
+        echo DEVICE=bluquattrod450 >> .tmp-config &&
+        repo_sync $1
+        ;;
+
 "galaxy-s2")
 	echo DEVICE=galaxys2 >> .tmp-config &&
 	repo_sync $1
@@ -153,6 +158,7 @@ case "$1" in
 	echo - emulator
 	echo - emulator-jb
 	echo - emulator-x86
+	echo - blu-quattro-d450
 	echo - emulator-x86-jb
 	exit -1
 	;;
